@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # Import smtplib for the actual sending function
 import smtplib
 
