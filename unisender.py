@@ -16,3 +16,7 @@ def get_list_id(list_name: str) -> int:
 def subscribe(list_name: str, email: str) -> None:
     list_id = get_list_id(list_name)
     make_request("subscribe", {"list_ids": list_id, "fields[email]": email})
+
+
+def create_campaign(message_id: int) -> None:
+    make_request("createCampaign", {"message_id": message_id})
