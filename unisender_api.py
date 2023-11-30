@@ -17,4 +17,4 @@ def make_request(method: str, params: dict[str, Any], lang: str = DEFAULT_LANG) 
     )
     resp.raise_for_status()
     print(resp.json())
-    return resp.json()["result"]  # type: ignore
+    return resp.json()["result"]
