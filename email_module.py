@@ -12,7 +12,9 @@ from pathlib import Path
 
 
 def send_message_from_yandex(
-    sender_email: str, password: str, msg: EmailMessage
+    sender_email: str,
+    password: str,
+    msg: EmailMessage,
 ) -> None:
     SMTP_PORT = 465  # For SSL
     SMTP_SERVER = "smtp.yandex.com"
