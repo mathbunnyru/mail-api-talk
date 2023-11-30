@@ -1,12 +1,19 @@
 # Import smtplib for the actual sending function
 import smtplib
+
 # Secure connection to SMTP Server
 import ssl
+
 # File handling
 from pathlib import Path
 
 
-def send_message_from_yandex(sender_email, password, receiver_email, message):
+def send_message_from_yandex(
+    sender_email: str,
+    password: str,
+    receiver_email: str,
+    message: str,
+) -> None:
     SMTP_PORT = 465  # For SSL
     SMTP_SERVER = "smtp.yandex.com"
 
@@ -16,7 +23,7 @@ def send_message_from_yandex(sender_email, password, receiver_email, message):
         server.sendmail(sender_email, receiver_email, message)
 
 
-def main():
+def main() -> None:
     message = """\
 Subject: Such a nice subject
 
