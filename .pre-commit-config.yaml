@@ -76,10 +76,3 @@ repos:
     rev: cfbbfdeb2391c14a37e101e92a77f54f329e1726 # frozen: 7.4.1
     hooks:
       - id: flake8
-
-# pre-commit.ci config reference: https://pre-commit.ci/#configuration
-ci:
-  autoupdate_schedule: monthly
-  # Docker hooks do not work in pre-commit.ci
-  # See: <https://github.com/pre-commit-ci/issues/issues/11>
-  skip: [hadolint-docker]
